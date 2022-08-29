@@ -18,7 +18,7 @@ function Footer() {
           Privacy Policy
         </a>
         <a href='/' target='_blank'>
-          Children's Online Privacy Policy
+          Childrens Online Privacy Policy
         </a>
         <a href='/' target='_blank'>
           Your California Privacy Rights

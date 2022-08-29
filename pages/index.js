@@ -26,7 +26,7 @@ export default function Characters({ characters }) {
 
   useEffect(() => {
     setPerson(characters);
-  }, []);
+  });
 
   return (
     <>

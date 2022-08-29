@@ -3,10 +3,11 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import SocialLinks from './SocialLinks';
 import Context from '../context';
+import Image from 'next/image';
 
 const Header = () => {
   const [searchPerson, setSearchPerson] = useState('');
-  const { person, searchResult, setSearchResult } = useContext(Context);
+  const { person, setSearchResult } = useContext(Context);
 
   function filterSearchPerson() {
     const searchItems = person.filter(el =>
@@ -26,9 +27,11 @@ const Header = () => {
       </HeaderLeft>
       <Link href={'/'}>
         <a>
-          <img
+          <Image
             src={'https://download.logo.wine/logo/Star_Wars/Star_Wars-Logo.wine.png'}
             alt='logo'
+            width={250}
+            height={150}
           />
         </a>
       </Link>
@@ -40,7 +43,7 @@ const Header = () => {
             value={searchPerson}
             onChange={e => setSearchPerson(e.target.value)}
           />
-          <img
+          <Image
             src={
               'https://static-mh.content.disney.io/starwars/assets/navigation/icon_search-957a123fdb62.svg'
             }
@@ -50,7 +53,7 @@ const Header = () => {
         </HeaderSearch>
         <HeaderAction>
           <button>LOG IN</button>
-          <span>//</span>
+          <span>|</span>
           <button>SIGN UP</button>
         </HeaderAction>
       </HeaderRight>
@@ -61,7 +64,6 @@ const Header = () => {
 export default Header;
 
 const HeaderContainer = styled.div`
-  padding: 20px;
   padding-bottom: 0;
   background-image: url('https://static-mh.content.disney.io/starwars/assets/navigation/navigation_stars@2x-815223a7aade.jpg');
   display: flex;
@@ -73,7 +75,7 @@ const HeaderContainer = styled.div`
   right: 0;
   left: 0;
   z-index: 999;
-  > a > img {
+  img {
     object-fit: contain;
     margin-top: -40px;
     margin-bottom: -20px;

@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import styled from 'styled-components';
 import '../styles/globals.css';
 import Context from '../context';
+import Image from 'next/image';
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
@@ -25,9 +26,11 @@ function MyApp({ Component, pageProps }) {
       {loading ? (
         <AppLoading>
           <AppLoadingContents>
-            <img
+            <Image
               src='https://download.logo.wine/logo/Star_Wars/Star_Wars-Logo.wine.png'
               alt='img'
+              width={200}
+              height={200}
             />
           </AppLoadingContents>
         </AppLoading>
@@ -60,7 +63,8 @@ const AppLoadingContents = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  > img {
+
+  img {
     object-fit: contain;
     height: 150px;
     margin-bottom: 20px;

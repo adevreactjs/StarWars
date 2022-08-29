@@ -8,6 +8,8 @@ const nextConfig = {
   },
   images: {
     domains: ['vignette.wikia.nocookie.net', 'download.logo.wine', 'static-mh.content.disney.io'],
+    loader: 'akamai',
+    path: '',
   },
 };
 

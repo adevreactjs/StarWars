@@ -31,8 +31,8 @@ function CharacterCard({ character }) {
               (character?.diedLocation && 'LOCATIONS') ||
               (character?.homeworld && 'LOCATIONS')}
           </h4>
-          {locations.filter(updateLocations).map(location => (
-            <p>{location !== '' && location}</p>
+          {locations.filter(updateLocations).map((location, index) => (
+            <p key={index}>{location !== '' && location}</p>
           ))}
           <h4>GENDER</h4>
           <span>{character?.gender}</span>
