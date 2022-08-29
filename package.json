@@ -2,6 +2,8 @@
   "name": "starwars",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://adevreactjs.github.io/StarWars",
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5"
+    "eslint-config-next": "12.2.5",
+    "gh-pages": "^4.0.0"
   }
 }
